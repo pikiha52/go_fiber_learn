@@ -38,5 +38,6 @@ func ConnectDB() {
 
 	// Migrate the database
 	DB.AutoMigrate(&model.Note{})
+	DB.AutoMigrate(&model.User{})
 	fmt.Println("Database Migrated")
 }
