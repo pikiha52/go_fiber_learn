@@ -1,6 +1,7 @@
 package router
 
 import (
+	authRoutes "go_fiber/internal/routes/auth"
 	noteRoutes "go_fiber/internal/routes/note"
 	userRoutes "go_fiber/internal/routes/user"
 
@@ -13,4 +14,6 @@ func SetupRoutes(app *fiber.App) {
 
 	noteRoutes.SetupNoteRoutes(api)
 	userRoutes.SetupUserRoutes(api)
+	authRoutes.SetupAuthRoutes(api)
+
 }
